@@ -1,8 +1,8 @@
 # Source the vimrc file
-echo 'source ~/git/config/vimrc' > ~/.vimrc
+echo 'source ~/git/odroid-setup/vimrc' > ~/.vimrc
 
 # Source the bashrc file
-echo 'source ~/git/config/bashrc' >> ~/.bashrc
+echo 'source ~/git/odroid-setup/bashrc' >> ~/.bashrc
 
 # Source the bashrc file from bash_profile
 echo 'source ~/.bashrc' >> ~/.bash_profile
