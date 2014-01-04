@@ -12,4 +12,4 @@ export IP=$(ifconfig | grep -m 1 -A 1 'wlan' | grep 'inet addr' | egrep -o  \(\(
 # Temporary
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/git/quadrotor
 
-source ~/git/odroid-setup/bash_ros_setup
+source ~/git/odroid_setup/bash_ros_setup
