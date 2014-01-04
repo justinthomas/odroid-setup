@@ -1,15 +1,57 @@
-# Aliases
-alias midi='rosrun korg_nanokontrol kontrol.py 3'
-alias myip="ifconfig | grep -m 1 'inet addr' | egrep -o \(\([0-9]\{1,3\}.\){3\}\)[0-9]\{1,3\} | head -n1"
-alias sdown='sudo shutdown -h now'
-alias e='emacs -nw'
-alias m='matlab -nodesktop -nosplash'
-alias mrsl='ssh mrsl.grasp.upenn.edu'
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
 
-# Set some session variables
-export IP=$(ifconfig | grep -m 1 -A 1 'wlan' | grep 'inet addr' | egrep -o  \(\([0-9]\{1,3\}.\){3\}\)[0-9]\{1,3\} | head -n1)
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
 
-# Temporary
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/git/quadrotor
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
 
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color) color_prompt=yes;;
+esac
+
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+	# We have color support; assume it's compliant with Ecma-48
+	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	# a case would tend to support setf rather than setaf.)
+	color_prompt=yes
+
+####
+####
+####
+
+source ~/git/odroid_setup/bash_aliases
 source ~/git/odroid_setup/bash_ros_setup
