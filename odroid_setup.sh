@@ -25,3 +25,12 @@ git clone git@github.com:loiannog/ibvs_formation_bearing.git ~/git/ibvs_formatio
 # Add the user to the dialout group for communication on serial
 sudo usermod -a -G dialout odroid
 
+# TooN Library
+wget http://www.edwardrosten.com/cvd/TooN-2.2.tar.gz ~/temp/
+cd ~/temp/
+tar -xvf TooN-2.2.tar.gz
+cd ./TooN-2.2
+./configure
+sudo make && sudo make install
+cd ~/
+rm -rf ~/temp/
