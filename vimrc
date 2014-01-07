@@ -9,6 +9,9 @@ set shiftwidth=2
 set tabstop=2
 set expandtab
 set background=dark
+set number
+set ls=2
+
 
 " Wildmenu
 if has("wildmenu")
@@ -19,4 +22,3 @@ if has("wildmenu")
   set wildmenu
   set wildmode=longest,list
 endif
-
