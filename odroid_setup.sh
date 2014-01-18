@@ -34,3 +34,6 @@ cd ./TooN-2.2
 sudo make && sudo make install
 cd ~/
 rm -rf ~/temp/
+
+# We need this apparently...
+sudo apt-get install ros-hydro-angles
