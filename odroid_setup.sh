@@ -36,4 +36,4 @@ cd ~/
 rm -rf ~/temp/
 
 # We need this apparently...
-sudo apt-get install ros-hydro-angles
+sudo apt-get install ros-hydro-angles ros-hydro-visualization-msgs
