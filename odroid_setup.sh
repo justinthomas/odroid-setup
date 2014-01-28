@@ -12,6 +12,10 @@ git clone git@github.com:kartikmohta/quadrotor.git ~/git/quadrotor/
 cd ~/git/quadrotor/
 git submodule init
 git submodule update
+git branch --track justin-formation-control origin/justin-formation-control
+
+# Clone the range_consensus repo
+git clone git@github.com:jpolin/range_consensus.git
 
 # clone the odroid_camera repository for the camera drivers
 git clone git@github.com:loiannog/odroid_camera.git ~/git/odroid_camera/
@@ -35,5 +39,5 @@ sudo make && sudo make install
 cd ~/
 rm -rf ~/temp/
 
-# We need this apparently...
-sudo apt-get install ros-hydro-angles ros-hydro-visualization-msgs
+# We need these apparently...
+sudo apt-get install ros-hydro-angles ros-hydro-visualization-msgs ros-hydro-nodelet-core ros-hydro-image* ros-hydro-common-msgs
