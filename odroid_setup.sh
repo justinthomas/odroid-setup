@@ -12,22 +12,8 @@ git clone git@github.com:kartikmohta/quadrotor.git ~/git/quadrotor/
 cd ~/git/quadrotor/
 git submodule init
 git submodule update
-git branch --track justin-formation-control origin/justin-formation-control
+git branch --track giuseppe-rgbd origin/giuseppe-rgbd
 
-# Clone the range_consensus repo
-git clone git@github.com:jpolin/range_consensus.git
-
-# clone the odroid_camera repository for the camera drivers
-git clone git@github.com:loiannog/odroid_camera.git ~/git/odroid_camera/
-
-# This library is required for the odroid_camera
-sudo apt-get install libzmq1
-
-# Formation bearing (image processing code)
-git clone git@github.com:loiannog/ibvs_formation_bearing.git ~/git/ibvs_formation_bearing/
-
-# Add the user to the dialout group for communication on serial
-sudo usermod -a -G dialout odroid
 
 # TooN Library
 wget http://www.edwardrosten.com/cvd/TooN-2.2.tar.gz ~/temp/
