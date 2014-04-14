@@ -25,5 +25,17 @@ sudo make && sudo make install
 cd ~/
 rm -rf ~/temp/
 
+#ROS installation commands
+sudo sh -c 'echo "deb http://packages.namniart.com/repos/ros raring main" > /etc/apt/sources.list.d/ros-latest.list'
+wget http://packages.namniart.com/repos/namniart.key -O - | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install ros-hydro-ros-base
+sudo apt-get install python-rosdep
+sudo rosdep init
+rosdep update
+echo "source /opt/ros/hydro/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+sudo apt-get install python-rosinstall
+
 # We need these apparently...
 sudo apt-get install ros-hydro-angles ros-hydro-visualization-msgs ros-hydro-nodelet-core ros-hydro-image* ros-hydro-common-msgs
