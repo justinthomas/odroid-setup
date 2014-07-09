@@ -7,7 +7,6 @@ echo 'source ~/git/odroid_setup/bashrc' >> ~/.bashrc
 # Source the bashrc file from bash_profile
 echo 'source ~/.bashrc' >> ~/.bash_profile
 
-
 # TooN Library
 wget http://www.edwardrosten.com/cvd/TooN-2.2.tar.gz ~/temp/
 cd ~/temp/
@@ -24,8 +23,7 @@ cd ~/git/quadrotor/
 git submodule init
 git submodule update
 git branch --track giuseppe-rgbd origin/giuseppe-rgbd
-
-
+git checkout giuseppe-rgbd
 
 #ROS installation commands
 sudo sh -c 'echo "deb http://packages.namniart.com/repos/ros raring main" > /etc/apt/sources.list.d/ros-latest.list'
