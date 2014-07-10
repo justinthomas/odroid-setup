@@ -12,8 +12,7 @@ edit the file etc/network/interfaces and add
 auto wlan0
     iface wlan0 inet static
     
-    wpa-driver wext
-    
+    wpa-driver wext\\
     wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
     
     address 192.168.129.100
