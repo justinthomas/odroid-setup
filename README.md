@@ -9,9 +9,8 @@ To configure the network follow the following instructions
 
 edit the file etc/network/interfaces and add
 
-auto wlan0
+    auto wlan0
     iface wlan0 inet static
-    
     wpa-driver wext
     wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
     address 192.168.129.100
@@ -20,11 +19,9 @@ auto wlan0
 
 edit the file wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf and add
 
-network={
-
+    network={
     ssid="mrsl_airrouterhp"
     scan_ssid=1
     key_mgmt=NONE
-
-}
+    }
 
