@@ -19,8 +19,8 @@ auto wlan0
     gateway 192.168.129.1
 
 edit the file wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf and add
+
 network={
-    
     ssid="mrsl_airrouterhp"
     scan_ssid=1
     key_mgmt=NONE
