@@ -25,3 +25,6 @@ edit the file wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf and add
     key_mgmt=NONE
     }
 
+be sure that in the file etc/hosts there is the instruction
+
+127.0.0.1 localhost
