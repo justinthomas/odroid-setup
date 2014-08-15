@@ -17,16 +17,9 @@ sudo make && sudo make install
 cd ~/
 rm -rf ~/temp/
 
-# Now clone the quadrotor repository and set up submodules
-git clone git@github.com:kartikmohta/quadrotor.git ~/git/quadrotor/
-cd ~/git/quadrotor/
-git submodule init
-git submodule update
-git branch --track giuseppe-rgbd origin/giuseppe-rgbd
-git checkout giuseppe-rgbd
 
 #ROS installation commands
-sudo sh -c 'echo "deb http://packages.namniart.com/repos/ros raring main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo sh -c 'echo "deb http://packages.namniart.com/repos/ros precise main" > /etc/apt/sources.list.d/ros-latest.list'
 wget http://packages.namniart.com/repos/namniart.key -O - | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install ros-hydro-ros-base
