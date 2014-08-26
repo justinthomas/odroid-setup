@@ -22,11 +22,12 @@ git clone git@github.com:kartikmohta/quadrotor.git ~/git/quadrotor/
 cd ~/git/quadrotor/
 git submodule init
 git submodule update
-git branch --track giuseppe-rgbd origin/giuseppe-rgbd
 git checkout giuseppe-rgbd
+git branch --track giuseppe-rgbd origin/giuseppe-rgbd
 
 #ROS installation commands
-sudo sh -c 'echo "deb http://packages.namniart.com/repos/ros raring main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo update-locale LANG=C LANGUAGE=C LC_ALL=C LC_MESSAGES=POSIX
+sudo sh -c 'echo "deb http://packages.namniart.com/repos/ros trusty main" > /etc/apt/sources.list.d/ros-latest.list'
 wget http://packages.namniart.com/repos/namniart.key -O - | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install ros-hydro-ros-base
