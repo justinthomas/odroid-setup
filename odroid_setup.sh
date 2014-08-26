@@ -30,7 +30,7 @@ sudo update-locale LANG=C LANGUAGE=C LC_ALL=C LC_MESSAGES=POSIX
 sudo sh -c 'echo "deb http://packages.namniart.com/repos/ros trusty main" > /etc/apt/sources.list.d/ros-latest.list'
 wget http://packages.namniart.com/repos/namniart.key -O - | sudo apt-key add -
 sudo apt-get update
-sudo apt-get install ros-hydro-ros-base
+sudo apt-get install ros-indigo-ros-base
 sudo apt-get install python-rosdep
 sudo rosdep init
 rosdep update
