@@ -23,7 +23,7 @@ cd ~/git/quadrotor/
 git submodule init
 git submodule update
 git checkout giuseppe-rgbd
-git branch --track giuseppe-rgbd origin/giuseppe-rgbd
+git branch --set-upstream-to=origin/giuseppe-rgbd giuseppe-rgbd
 
 #ROS installation commands
 sudo update-locale LANG=C LANGUAGE=C LC_ALL=C LC_MESSAGES=POSIX
