@@ -34,9 +34,9 @@ sudo apt-get install ros-hydro-ros-base
 sudo apt-get install python-rosdep
 sudo rosdep init
 rosdep update
-echo "source /opt/ros/hydro/setup.bash" >> ~/.bashrc
+echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 sudo apt-get install python-rosinstall
 
 # We need these apparently...
-sudo apt-get install ros-hydro-angles ros-hydro-visualization-msgs ros-hydro-nodelet-core ros-hydro-image* ros-hydro-common-msgs
+sudo apt-get install ros-indigo-angles ros-indigo-visualization-msgs ros-indigo-nodelet-core ros-indigo-image* ros-indigo-common-msgs
