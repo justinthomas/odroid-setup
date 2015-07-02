@@ -1,3 +1,14 @@
+###############################################################################
+##  This is a setup script for odroid xu3s that have Ubuntu 14.04 already    ##
+##  flashed on them. Run the 14.04 setup script from Dropbox first.          ##
+###############################################################################
+
+# Stop if errors
+set -e 
+
+# Add the user to the dialout group for communication on serial
+sudo usermod -a -G dialout odroid
+
 # Source the vimrc file
 echo 'source ~/git/odroid_setup/vimrc' > ~/.vimrc
 
@@ -7,37 +18,14 @@ echo 'source ~/git/odroid_setup/bashrc' >> ~/.bashrc
 # Source the bashrc file from bash_profile
 echo 'source ~/.bashrc' >> ~/.bash_profile
 
-# Now clone the quadrotor repository and set up submodules
-git clone git@github.com:kartikmohta/quadrotor.git ~/git/quadrotor/
-cd ~/git/quadrotor/
+# Quadrotor Control 
+cd ~/git/
+git clone git@github.com:KumarRobotics/quadrotor_control.git
+cd ~/git/quadrotor_control/
 git submodule init
 git submodule update
-git branch --track justin-formation-control origin/justin-formation-control
+git branch --track mav_manager origin/feature/mav_manager
 
-# Clone the range_consensus repo
-git clone git@github.com:jpolin/range_consensus.git
-
-# clone the odroid_camera repository for the camera drivers
-git clone git@github.com:loiannog/odroid_camera.git ~/git/odroid_camera/
-
-# This library is required for the odroid_camera
-sudo apt-get install libzmq1
-
-# Formation bearing (image processing code)
-git clone git@github.com:loiannog/ibvs_formation_bearing.git ~/git/ibvs_formation_bearing/
-
-# Add the user to the dialout group for communication on serial
-sudo usermod -a -G dialout odroid
-
-# TooN Library
-wget http://www.edwardrosten.com/cvd/TooN-2.2.tar.gz ~/temp/
-cd ~/temp/
-tar -xvf TooN-2.2.tar.gz
-cd ./TooN-2.2
-./configure
-sudo make && sudo make install
-cd ~/
-rm -rf ~/temp/
-
-# We need these apparently...
-sudo apt-get install ros-hydro-angles ros-hydro-visualization-msgs ros-hydro-nodelet-core ros-hydro-image* ros-hydro-common-msgs
+# Formation Control stack
+cd ~/git/
+git clone git@github.com:justinthomas/vision_based_formation_control.git
