@@ -21,6 +21,7 @@ echo 'source ~/.bashrc' >> ~/.bash_profile
 # Configure git
 git config --global user.email "justinthomas@jtwebs.net"
 git config --global user.name "justinthomas"
+git config --global push.default simple
 
 # Quadrotor Control 
 cd ~/git/
