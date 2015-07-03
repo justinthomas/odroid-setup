@@ -10,7 +10,8 @@ set -e
 sudo usermod -a -G dialout odroid
 
 # Some more dependencies
-sudo apt-get install ros-indigo-tf
+sudo apt-get install ros-indigo-perception ros-indigo-diagnostics
+# ros-indigo-tf
 
 # Source the vimrc file
 echo 'source ~/git/odroid_setup/vimrc' > ~/.vimrc
