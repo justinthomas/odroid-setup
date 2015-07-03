@@ -9,6 +9,9 @@ set -e
 # Add the user to the dialout group for communication on serial
 sudo usermod -a -G dialout odroid
 
+# Some more dependencies
+sudo apt-get install ros-indigo-tf
+
 # Source the vimrc file
 echo 'source ~/git/odroid_setup/vimrc' > ~/.vimrc
 
@@ -36,3 +39,12 @@ ln -s ~/git/quadrotor_control/ ~/catkin_ws/src/
 cd ~/git/
 git clone git@github.com:justinthomas/vision_based_formation_control.git
 ln -s ~/git/vision_based_formation_control/ ~/catkin_ws/src/
+
+# KumarRobotics/camera_base
+cd ~/git/
+git clone git@github.com:KumarRobotics/camera_base.git
+ln -s ~/git/camera_base/ ~/catkin_ws/src/
+
+# KumarRobotics/bluefox2 (mvBlueFox camera)
+git clone git@github.com:KumarRobotics/bluefox2.git
+ln -s ~/git/bluefox2/ ~/catkin_ws/src/
