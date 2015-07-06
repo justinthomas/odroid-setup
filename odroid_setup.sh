@@ -31,9 +31,9 @@ git config --global push.default simple
 cd ~/git/
 git clone git@github.com:KumarRobotics/quadrotor_control.git
 cd ~/git/quadrotor_control/
+git checkout -b mav_manager origin/feature/mav_manager
 git submodule init
 git submodule update
-git branch --track mav_manager origin/feature/mav_manager
 ln -s ~/git/quadrotor_control/ ~/catkin_ws/src/
 
 # Formation Control stack
