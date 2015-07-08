@@ -6,6 +6,9 @@
 # Stop if errors
 set -e 
 
+# Make sure the time is correct before downloading repos
+sudo ntpdate -s time.nist.gov
+
 # Add the user to the dialout group for communication on serial
 sudo usermod -a -G dialout odroid
 
