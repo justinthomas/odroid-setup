@@ -52,3 +52,15 @@ ln -s ~/git/camera_base/ ~/catkin_ws/src/
 # KumarRobotics/bluefox2 (mvBlueFox camera)
 git clone git@github.com:KumarRobotics/bluefox2.git
 ln -s ~/git/bluefox2/ ~/catkin_ws/src/
+
+# Set up wireless networking
+echo "You need to add the MAC address to the airrouter ACL";
+sudo rm /etc/wpa_supplicant/wpa_supplicant.conf
+sudo ln -s ~/git/odroid_setup/wpa_supplicant /etc/wpa_supplicant/wpa_supplicant.conf
+
+echo "Writing the following to /etc/network/interfaces"
+echo -e "\nauto wlan0" | sudo tee -a /etc/network/interfaces
+echo -e "iface wlan0 inet dhcp" | sudo tee -a /etc/network/interfaces
+echo -e "gateway 192.168.129.1" | sudo tee -a /etc/network/interfaces
+echo -e "netmaks 255.255.255.0" | sudo tee -a /etc/network/interfaces
+echo -e "wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf" | sudo tee -a /etc/network/interfaces
