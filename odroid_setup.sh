@@ -10,7 +10,7 @@ set -e
 sudo ntpdate -s time.nist.gov
 
 # Add the user to the dialout group for communication on serial
-sudo usermod -a -G dialout odroid
+sudo usermod -a -G dialout $USER
 
 # Some more dependencies
 sudo apt-get install ros-indigo-perception ros-indigo-diagnostics
