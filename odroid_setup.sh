@@ -16,11 +16,11 @@ sudo usermod -a -G dialout $USER
 sudo apt-get install -y ros-indigo-perception ros-indigo-diagnostics
 # ros-indigo-tf
 
-# Source the vimrc file
-ln -s ~/git/odroid_setup/vimrc ~/.vimrc
+# Overwrite the vimrc file with a symlink
+ln -sf ~/git/odroid_setup/vimrc ~/.vimrc
 
-# Source the bashrc file
-ln -s ~/git/odroid_setup/bashrc ~/.bashrc
+# Overwrite the bashrc file with a symlink
+ln -sf ~/git/odroid_setup/bashrc ~/.bashrc
 
 # Source the bashrc file from bash_profile
 echo 'source ~/.bashrc' >> ~/.bash_profile
