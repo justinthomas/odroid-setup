@@ -7,13 +7,13 @@
 set -e 
 
 # Make sure the time is correct before downloading repos
-sudo ntpdate -s time.nist.gov
+sudo ntpdate -u time.nist.gov
 
 # Add the user to the dialout group for communication on serial
 sudo usermod -a -G dialout $USER
 
 # Some more dependencies
-sudo apt-get install ros-indigo-perception ros-indigo-diagnostics
+sudo apt-get install -y ros-indigo-perception ros-indigo-diagnostics
 # ros-indigo-tf
 
 # Source the vimrc file
