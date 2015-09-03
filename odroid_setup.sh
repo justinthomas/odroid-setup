@@ -17,10 +17,10 @@ sudo apt-get install ros-indigo-perception ros-indigo-diagnostics
 # ros-indigo-tf
 
 # Source the vimrc file
-echo 'source ~/git/odroid_setup/vimrc' > ~/.vimrc
+ln -s ~/git/odroid_setup/vimrc ~/.vimrc
 
 # Source the bashrc file
-echo 'source ~/git/odroid_setup/bashrc' >> ~/.bashrc
+ln -s ~/git/odroid_setup/bashrc ~/.bashrc
 
 # Source the bashrc file from bash_profile
 echo 'source ~/.bashrc' >> ~/.bash_profile
