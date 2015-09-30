@@ -55,7 +55,7 @@ ln -s ~/git/bluefox2/ ~/catkin_ws/src/
 
 # Set up wireless networking. Warning: This will overwrite the wpa_supplicant
 echo "You need to add the MAC address to the airrouter ACL";
-sudo ln -sf ~/git/odroid_setup/wpa_supplicant /etc/wpa_supplicant/wpa_supplicant.conf
+sudo ln -sf ~/git/odroid_setup/config/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
 
 echo "Writing the following to /etc/network/interfaces"
 echo -e "\nauto wlan0" | sudo tee -a /etc/network/interfaces
