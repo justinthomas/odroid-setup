@@ -54,7 +54,7 @@ git clone git@github.com:KumarRobotics/bluefox2.git
 ln -s ~/git/bluefox2/ ~/catkin_ws/src/
 
 # Fix permissions for the camera
-sudo cp -f ~/git/bluefox2/mvIMPACT/scripts/51-mvbf.rules /etc/udev/rules.d/
+sudo cp -f ~/git/bluefox2/mvIMPACT/script/51-mvbf.rules /etc/udev/rules.d/
 sudo service udev reload
 # Note: you will need to reboot the computer for this to take effect
 
