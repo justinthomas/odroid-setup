@@ -53,6 +53,11 @@ ln -s ~/git/camera_base/ ~/catkin_ws/src/
 git clone git@github.com:KumarRobotics/bluefox2.git
 ln -s ~/git/bluefox2/ ~/catkin_ws/src/
 
+# Fix permissions for the camera
+sudo cp -f ~/git/bluefox2/mvIMPACT/scripts/51-mvbf.rules /etc/udev/rules.d/
+sudo service udev reload
+# Note: you will need to reboot the computer for this to take effect
+
 # Set up wireless networking. Warning: This will overwrite the wpa_supplicant
 echo "You need to add the MAC address to the airrouter ACL";
 sudo ln -sf ~/git/odroid_setup/config/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
