@@ -61,5 +61,5 @@ echo "Writing the following to /etc/network/interfaces"
 echo -e "\nauto wlan0" | sudo tee -a /etc/network/interfaces
 echo -e "iface wlan0 inet dhcp" | sudo tee -a /etc/network/interfaces
 echo -e "gateway 192.168.129.1" | sudo tee -a /etc/network/interfaces
-echo -e "netmaks 255.255.255.0" | sudo tee -a /etc/network/interfaces
+echo -e "netmask 255.255.255.0" | sudo tee -a /etc/network/interfaces
 echo -e "wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf" | sudo tee -a /etc/network/interfaces
