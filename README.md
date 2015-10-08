@@ -40,3 +40,9 @@ If the wireless adaptor is something other than wlan0:
 
     rm /etc/udev/rules.d/70-persistent-net.rules
 
+If you can't connect to airrouther_hp 
+======
+
+    sudo iwconfig wlan0 essid mrsl_airrouterhp
+    sudo reboot now
+
