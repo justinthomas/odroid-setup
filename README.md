@@ -39,6 +39,7 @@ If the wireless adaptor is something other than wlan0:
 ======
 
     rm /etc/udev/rules.d/70-persistent-net.rules
+    sudo reboot now
 
 If you can't connect to airrouther_hp 
 ======
