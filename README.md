@@ -33,3 +33,10 @@ Setup an ODROID XU3:
         git clone git@github.com:justinthomas/odroid_setup.git ~/git/odroid_setup/
         cd ~/git/odroid_setup/
         ./odroid_setup.sh
+
+
+If the wireless adaptor is something other than wlan0:
+======
+
+    rm /etc/udev/rules.d/70-persistent-net.rules
+
