@@ -110,5 +110,7 @@ fi
 ####
 ####
 
-source ~/git/odroid_setup/bash_aliases
-source ~/git/odroid_setup/bash_ros_setup
+source ~/git/odroid_setup/bash/aliases
+source ~/git/odroid_setup/bash/functions
+source ~/git/odroid_setup/bash/ros_setup
+source ~/git/odroid_setup/bash/colors

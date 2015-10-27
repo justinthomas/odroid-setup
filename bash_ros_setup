@@ -1,7 +1,0 @@
-source ~/catkin_ws/devel/setup.bash
-# export ROS_PACKAGE_PATH=/opt/ros/indigo/share:/opt/ros/indigo/stacks
-# export ROS_WORKSPACE=~/git/
-# export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/git/
-
-export ROS_MASTER_URI=http://$(echo $SSH_CLIENT | egrep -o ^[0-9.]+):11311
-export ROS_HOSTNAME=$IP

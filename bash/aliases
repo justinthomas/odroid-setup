@@ -18,9 +18,3 @@ alias scO='roslaunch ~/git/quadrotor/launch/state_control.launch model:=Quadroto
 alias cA='roslaunch ~/git/quadrotor/launch/robot.launch model:=QuadrotorAlpha'
 alias cG='roslaunch ~/git/quadrotor/launch/robot.launch model:=QuadrotorGolf'
 alias cO='roslaunch ~/git/quadrotor/launch/robot.launch model:=QuadrotorOscar'
-
-
-# Set some session variables
-export IP=$(ifconfig | grep -m 1 -A 1 'wlan' | grep 'inet addr' | egrep -o  \(\([0-9]\{1,3\}.\){3\}\)[0-9]\{1,3\} | head -n1)
-
-

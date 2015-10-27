@@ -1,0 +1,11 @@
+source ~/catkin_ws/devel/setup.bash
+# export ROS_PACKAGE_PATH=/opt/ros/indigo/share:/opt/ros/indigo/stacks
+# export ROS_WORKSPACE=~/git/
+# export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/git/
+
+# export IP=$(ifconfig | grep -m 1 -A 1 'wlan' | grep 'inet addr' | egrep -o  \(\([0-9]\{1,3\}.\){3\}\)[0-9]\{1,3\} | head -n1)
+
+# export IP=$(ifconfig | grep -m 1 -A 1 'eth0' | grep 'inet addr' | egrep -o  \(\([0-9]\{1,3\}.\){3\}\)[0-9]\{1,3\} | head -n1)
+
+# export ROS_MASTER_URI=http://$(echo $SSH_CLIENT | egrep -o ^[0-9.]+):11311
+# export ROS_IP=$IP

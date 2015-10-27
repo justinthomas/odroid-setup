@@ -1,0 +1,21 @@
+#!/bin/bash
+
+function update() {
+  source ~/git/odroid_setup/bash/colors
+  CURR_DIR=$(pwd)
+  cd ~/git/
+  for d in *
+  do
+    cd ~/git/$d
+    echo -e "\e[0;32m~/git/$d:\e[0m"
+    git pull
+  done
+  cd $CURR_DIR
+}
+
+
+function cm() {
+  cd ~/catkin_ws/
+  catkin_make -j2
+  cd -
+}
