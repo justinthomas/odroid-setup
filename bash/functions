@@ -1,7 +1,6 @@
 #!/bin/bash
 
 function update() {
-  source ~/git/odroid_setup/bash/colors
   CURR_DIR=$(pwd)
   cd ~/git/
   for d in *
