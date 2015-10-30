@@ -16,6 +16,6 @@ function update() {
 function cm() {
   CURR_DIR=$(pwd)
   cd ~/catkin_ws/
-  catkin_make -j2
+  catkin_make -j2 -l2
   cd $CURR_DIR
 }
