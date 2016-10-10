@@ -9,3 +9,5 @@ export IP=$(ifconfig | grep -m 1 -A 1 'wlan' | grep 'inet addr' | egrep -o  \(\(
 
 export ROS_MASTER_URI=http://$(echo $SSH_CLIENT | egrep -o ^[0-9.]+):11311
 export ROS_IP=$IP
+
+alias setrosmaster='export ROS_MASTER_URI=http://$(eval ip):11311 && export ROS_IP=$(eval ip)'

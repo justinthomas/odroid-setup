@@ -11,7 +11,6 @@ iface eth0 inet dhcp
 #wpa-ssid "turtle"
 #wpa-psk "radacina"
 
-
 auto wlan0
 iface wlan0 inet dhcp
 gateway 192.168.129.1
